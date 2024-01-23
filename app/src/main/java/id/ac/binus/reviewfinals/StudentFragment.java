@@ -35,7 +35,7 @@ public class StudentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_student, container, false);
+        // TODO fill logic to get component view here
 
         EditText fragment_student_search_edittext = view.findViewById(R.id.fragment_student_search_edittext);
         Button fragment_student_search_button = view.findViewById(R.id.fragment_student_search_button);

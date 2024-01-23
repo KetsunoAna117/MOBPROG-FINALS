@@ -30,7 +30,7 @@ public class CourseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_course, container, false);
+        // TODO fill logic to get component view here
 
         fragment_course_listview = view.findViewById(R.id.fragment_course_listview);
         fragment_course_add_button = view.findViewById(R.id.fragment_course_add_button);
@@ -68,11 +68,10 @@ public class CourseFragment extends Fragment {
         fragment_course_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Course selectedCourse = courseList.get(position);
-                Intent intent = new Intent(getActivity(), CourseDetails.class);
-
-                intent.putExtra("courseID", selectedCourse.getCourseID());
-                startActivity(intent);
+                // TODO add logic to navigate to course details intent whenever an item is clicked in list view
+                // TODO don't forget to pass courseID to course details intent
+                
+                fix meeee
             }
         });
 
@@ -80,9 +79,7 @@ public class CourseFragment extends Fragment {
     }
 
     private void putCourseData() {
-        CourseDatabaseHelper db = new CourseDatabaseHelper(getActivity());
-        courseList = db.getAllCourse();
-        CourseAdapter adapter = new CourseAdapter(getActivity(), R.layout.activity_course_adapter, courseList);
-        fragment_course_listview.setAdapter(adapter);
+        // TODO add logic to get all course data from sqlite here and put on the component
+        good luck
     }
 }

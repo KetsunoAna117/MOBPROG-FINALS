@@ -20,58 +20,27 @@ public class CourseDatabaseHelper extends DatabaseHelper{
     }
 
     public boolean insertCourse(String courseID, String courseName){
-        SQLiteDatabase db = getWritableDatabase();
+        // TODO fill logic to insert course here
 
-        ContentValues values = new ContentValues();
-        values.put("courseID", courseID);
-        values.put("courseName", courseName);
-
-        long result = db.insert("course", null, values);
-        return result > 0;
     }
 
     public boolean updateCourse(String courseID, String courseName){
-        SQLiteDatabase db = getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put("courseName", courseName);
-
-        long result = db.update("course", values, "courseID = ?", new String[]{courseID});
-        return result > 0;
+        // TODO fill logic to update course here, make sure don't update courseID too
 
     }
 
     public boolean deleteCourse(String courseID){
-        SQLiteDatabase db = getWritableDatabase();
+        // TODO fill logic to delete course here
 
-        long result = db.delete("course", "courseID = ?", new String[]{courseID});
-        return result > 0;
     }
 
     public Course getCourse(String courseID){
-        SQLiteDatabase db = getWritableDatabase();
-        StudentDatabaseHelper studentDbHelper = new StudentDatabaseHelper(context);
+        // TODO add logic to get course by courseID here
 
-        Cursor cursor = db.rawQuery("SELECT * FROM course WHERE courseID = ?", new String[]{courseID});
-        while(cursor.moveToNext()){
-            return new Course(cursor.getString(0), cursor.getString(1), studentDbHelper.getAllStudentBasedOnCourseID(courseID));
-        }
-        cursor.close();
-
-        return null;
     }
 
     public ArrayList<Course> getAllCourse(){
-        SQLiteDatabase db = getWritableDatabase();
-        StudentDatabaseHelper studentDbHelper = new StudentDatabaseHelper(context);
-        ArrayList<Course> courseList = new ArrayList<>();
+        // TODO add logic to getAllCourse here
 
-        Cursor cursor = db.rawQuery("SELECT * FROM course", null);
-        while(cursor.moveToNext()){
-            courseList.add(new Course(cursor.getString(0), cursor.getString(1), studentDbHelper.getAllStudentBasedOnCourseID(cursor.getString(0))));
-        }
-
-        cursor.close();
-        return courseList;
     }
 }

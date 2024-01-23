@@ -26,11 +26,8 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         nav.setOnItemSelectedListener(this);
         nav.getMenu().getItem(0).setChecked(true);
 
-        // declare fragment
-        StudentFragment fragment = new StudentFragment();
-
-        // set frame
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, fragment).commit();
+        // TODO add initial fragment here (Student Fragment)
+        add initial fragment here
 
     }
 
@@ -39,13 +36,13 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
             case R.id.mnStudent:
-                StudentFragment studentFragment = new StudentFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, studentFragment).commit();
+                // TODO add logic to switch fragment to student fragment whenever menu is clicked here
+                something...
                 break;
 
             case R.id.mnCourse:
-                CourseFragment courseFragment = new CourseFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, courseFragment).commit();
+                // TODO add logic to switch fragment to course fragment whenever menu is clicked here
+                something...
                 break;
         }
         return true;

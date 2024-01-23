@@ -30,17 +30,12 @@ public class StudentAdapter extends ArrayAdapter<Student> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Student selectedStudent = getItem(position);
-
-        LayoutInflater inflater = LayoutInflater.from(context);
-        convertView = inflater.inflate(resource, parent, false);
-
-        TextView adapter_student_id = convertView.findViewById(R.id.adapter_student_id);
-        TextView adapter_student_name = convertView.findViewById(R.id.adapter_student_name);
-
-        adapter_student_id.setText(selectedStudent.getStudentNIM());
-        adapter_student_name.setText((selectedStudent.getStudentName()));
-
-        return convertView;
+        /*
+        TODO add logic to show student data here
+        Required Field:
+        1. adapter_student_id (TextView)
+        2. adapter_student_name (TextView)
+        For references open layour activity_student_adapter
+         */
     }
 }

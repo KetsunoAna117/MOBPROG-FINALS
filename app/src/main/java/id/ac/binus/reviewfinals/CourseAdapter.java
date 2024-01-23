@@ -29,17 +29,14 @@ public class CourseAdapter extends ArrayAdapter<Course> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Course selectedCourse = getItem(position);
+        /*
+        TODO add logic to show course data here
+        Required Field:
+        1. adapter_course_id (TextView)
+        2. adapter_course_name (TextView)
+        For references open layour activity_course_adapter
+         */
 
-        LayoutInflater inflater = LayoutInflater.from(context);
-        convertView = inflater.inflate(resource, parent, false);
 
-        TextView adapter_course_id = convertView.findViewById(R.id.adapter_course_id);
-        TextView adapter_course_name = convertView.findViewById(R.id.adapter_course_name);
-
-        adapter_course_id.setText(selectedCourse.getCourseID());
-        adapter_course_name.setText(selectedCourse.getCourseName());
-
-        return convertView;
     }
 }
