@@ -35,11 +35,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         "courseID TEXT," +
                         "FOREIGN KEY (courseID) REFERENCES course(courseID)" +
                         ")");
-
-        sqLiteDatabase.execSQL(
-                "INSERT INTO course VALUES ('1', 'Mobile Programming');"
-        );
-
     }
 
 
