@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Student"
+        android:id="@+id/mnStudent"
+        android:icon="@drawable/student_icon"
+        />
+    <item
+        android:title="Course"
+        android:id="@+id/mnCourse"
+        android:icon="@drawable/course_icon"
+        />
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10sp"
+    android:layout_height="match_parent"
+    tools:context=".CourseDetails">
+
+    <LinearLayout
+        android:id="@+id/course_details_container"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:text="Course Details"
+            android:layout_marginBottom="20sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="Course ID"
+            android:enabled="false"
+            android:id="@+id/details_course_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:hint="Course Name"
+            android:id="@+id/details_course_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
+        android:id="@+id/course_details_students_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/course_details_container"
+        android:layout_above="@+id/course_details_button_container">
+
+        <TextView
+            android:text="Student Enrolled"
+            android:layout_marginBottom="20sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/course_details_student_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/course_details_button_container"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <Button
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:id="@+id/update_data_btn"
+            android:text="Update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:id="@+id/delete_data_btn"
+            android:text="Delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    tools:context=".StudentDetails">
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/student_details_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:text="Student Details"
+            android:layout_marginBottom="20sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:hint="Student NIM"
+            android:enabled="false"
+            android:id="@+id/details_student_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:hint="Student Name"
+            android:id="@+id/details_student_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:hint="Student Phone"
+            android:id="@+id/details_student_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:hint="Enrolled Course ID"
+            android:id="@+id/details_student_course_enrolled_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/details_student_course_enrolled_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/student_details_button_container"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <Button
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:id="@+id/update_data_btn"
+            android:text="Update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:id="@+id/delete_data_btn"
+            android:text="Delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
